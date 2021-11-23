@@ -10,6 +10,7 @@
                  <ul>
                     <li><a href="inscription.php">Inscription</a></li>
                     <li><a href="connexion.php">Connexion</a></li>
+                    <li><a href="Deconnexion.php">Deconnexion</a></li>
                 </ul>
             </div>
         </nav>
