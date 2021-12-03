@@ -16,7 +16,7 @@ body{
 
 /*///////HEADER////////*/
 
-.header{
+.heroPhoto{
     width: 100%;
     height: 95vh;
     background-image: url(https://weezevent.com/wp-content/uploads/2019/04/02103919/groupe-musique-dj-evenement.jpg);
@@ -52,12 +52,12 @@ nav ul{
     padding: 0%;
     text-align: center;
     margin-top: 20px;
-    margin-left: 1000px;
+    margin-left: 150px;
 }
 
 nav ul li{
     display: inline-block;
-    padding: 20px;
+    padding: 10px;
     
 }
 
@@ -142,7 +142,13 @@ nav ul li a{
     background-size: cover;
 }
 
+ 
+/*///////// ADMIN /////////*/
 
+.mainAdmin{
+   position: absolute;
+   margin-top: 50px;
+}
 
 
 

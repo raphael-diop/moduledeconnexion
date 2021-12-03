@@ -1,3 +1,7 @@
+<?php
+session_start(); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,20 +13,12 @@
 </head>
 <body>
 
-       <header class="header">
-        <nav>
-            <div class="logo">
-                <div class="retouracceuil">
-                    <h1><a href="index.php">Musiteam</h1></a>
-                </div>
-                <img width="100px" height="100px" src="https://img.myloview.fr/images/logo-de-crane-de-musique-logo-de-crane-modele-de-logo-de-vecteur-400-66991600.jpg">
-            </div>
-                 <ul>
-                    <li><a href="inscription.php">Inscription</a></li>
-                    <li><a href="connexion.php">Connexion</a></li>
-                </ul>
-            </div>
-        </nav>
+<?php require 'fixe.php'; ?> 
+
+
+        <div class = "heroPhoto">
+
+        </div>
     </header>
 
     <main>
@@ -47,9 +43,9 @@
             <div class="column">
                 <h4>A propos</h4>
                 <ul>
-                    <li><a href="file:///C:/Users/rapha/Downloads/index%20(2).html#">Notre equipe</a></li>
                     <li><a href="file:///C:/Users/rapha/Downloads/index%20(2).html#">Nos services</a></li>
                     <li><a href="file:///C:/Users/rapha/Downloads/index%20(2).html#">Politique de confidentialité</a></li>
+                    <li><a href="https://github.com/raphael-diop/moduledeconnexion">repos Github</a></li>
                 </ul>
             </div>
             
@@ -59,7 +55,7 @@
                 <ul>
                     <li><a href="file:///C:/Users/rapha/Downloads/index%20(2).html#">FAQ</a></li>
                     <li><a href="file:///C:/Users/rapha/Downloads/index%20(2).html#">Shipping</a></li>
-         <li><a href="file:///C:/Users/rapha/Downloads/index%20(2).html#">Payment Methods</a></li>
+                    <li><a href="file:///C:/Users/rapha/Downloads/index%20(2).html#">Payment Methods</a></li>
        </ul>
             </div>
             

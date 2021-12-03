@@ -42,10 +42,10 @@ $message = "";
     <form class="formContainer" action="" method="post">
         <h1>Modification de Profil</h1>
         <?php echo "<strong>" .$message. "</strong>" ?>
-        <p><input type="text" name="login" class="zonetext" required= "required" placeholder="<?php if(isset($login)){echo $login; }else{ echo $_SESSION['login'];}?>"></p>
-        <p><input type="text" name="prenom" class="zonetext" required= "required" placeholder="<?php if(isset($prenom)){echo $prenom; }else{ echo $_SESSION['prenom'];}?>"></p>
-        <p><input type="text" name="nom" class="zonetext" required= "required" placeholder="<?php if(isset($nom)){echo $nom; }else{ echo $_SESSION['nom'];}?>"></p>
-        <p><input type="text" name="instrument" class="zonetext" required= "required" placeholder="<?php if(isset($instrument)){echo $instrument; }else{ echo $_SESSION['instrument'];}?>"></p>
+        <p><input type="text" name="login" class="zonetext" required= "required" value="<?php if(isset($login)){echo $login; }else{ echo $_SESSION['login'];}?>"></p>
+        <p><input type="text" name="prenom" class="zonetext" required= "required" value="<?php if(isset($prenom)){echo $prenom; }else{ echo $_SESSION['prenom'];}?>"></p>
+        <p><input type="text" name="nom" class="zonetext" required= "required" value="<?php if(isset($nom)){echo $nom; }else{ echo $_SESSION['nom'];}?>"></p>
+        <p><input type="text" name="instrument" class="zonetext" required= "required" value="<?php if(isset($instrument)){echo $instrument; }else{ echo $_SESSION['instrument'];}?>"></p>
         <p><input type="password" name="password" class="zonetext" required= "required" placeholder="Password"></p>
         <p><input type="password" name="password_retype" class="zonetext" required= "required" placeholder="Password Confirmation ..."></p>
         <p><button type="submit" name="modification">Enregistrer</button></p>

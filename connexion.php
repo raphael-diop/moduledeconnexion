@@ -17,6 +17,7 @@ if(isset($_POST['login']) && isset($_POST['password'])){
     $request = mysqli_query($bdd, "SELECT*FROM utilisateurs WHERE login = '$login'");
     $result = $request-> fetch_array( MYSQLI_ASSOC);
 
+
     if(count($result)== 0){
 
         header('location:inscription.php');
@@ -27,12 +28,14 @@ if(isset($_POST['login']) && isset($_POST['password'])){
         $message = "PASSWORD INVALIDE";
     }
     else if($result['password'] == 'admin'){
-        header('location:admin.php');
+        $message = 'Bonjour Admin';
+        $_SESSION = $result;
+        header('location: admin.php');
+        exit;
+      
     }
     else{
         $message = 'CONNEXION REUSSI';
-        $message2 = 'Retour à la page Acceuil';
-        $message3 = 'Modifier son profil';
         $_SESSION = $result;
     }
     }
@@ -59,18 +62,9 @@ if(isset($_POST['login']) && isset($_POST['password'])){
         <?php  echo '<p>'. '<strong>'.$message.'</strong>' . '</p>'?>
        
 
-        <p><input type="text" name="login" class="zonetext"  placeholder="Login..."></p>
-        <p><input type="password" name="password" class="zonetext"  placeholder="Password ..."></p>
-        <p><input type="submit" class="boutonvalidation" name="champformulaire                          "></p>
-
-        <div>
-            
-                <a href="index.php"><?php  echo '<p>'. '<strong>'.$message2.'</strong>' . '</p>'?><a/>
-           
-        </div>
-        <div>
-            <h3><a href="profil.php"><?php  echo '<p>'. '<strong>'.$message3.'</strong>' . '</p>'?><a/></h3>
-        </div>
+        <p><input type="text" name="login" class="zonetext" required='required' placeholder="Login..."></p>
+        <p><input type="password" name="password" class="zonetext" required='required'  placeholder="Password ..."></p>
+        <p><input type="submit" class="boutonvalidation" name="champformulaire"></p>
     </form>
     </main>
  

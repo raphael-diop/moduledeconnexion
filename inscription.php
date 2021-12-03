@@ -14,13 +14,19 @@ $message = "";
      $instrument = htmlspecialchars($_POST['instrument']);
      $password_retype = htmlspecialchars($_POST['password_retype']);
 
+     $request = mysqli_query($bdd, "SELECT*FROM utilisateurs WHERE login = '$login'");
+     $result = $request-> fetch_array( MYSQLI_ASSOC);
+
      if($password === $password_retype){
-        $requete = mysqli_query($bdd, "INSERT INTO `utilisateurs`(`login`, `prenom`, `nom`, `password`, `instrument`) VALUES ( '$login', '$prenom', '$nom', '$password', '$instrument')");
-        header('location:connexion.php');
+         if(count($result) == 0){
+            $requete = mysqli_query($bdd, "INSERT INTO `utilisateurs`(`login`, `prenom`, `nom`, `password`, `instrument`) VALUES ( '$login', '$prenom', '$nom', '$password', '$instrument')");
+            header('location:connexion.php');
+         }else{ 
+            $message = "Login déja existant";
+         }  
      }else{
          $message = "Mots de passe non-identiques";
      }
-
     
  }
 

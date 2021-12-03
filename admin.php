@@ -1,4 +1,5 @@
 <?php
+session_start();
 // // SE CONNECTER A LA BASE DE DONNEE
 $bdd = mysqli_connect('localhost', 'root', '', 'moduleconnexion');
 // // ENCODER LA BASE DE DONNEE
@@ -6,8 +7,6 @@ $bdd = mysqli_connect('localhost', 'root', '', 'moduleconnexion');
 
  $request = mysqli_query($bdd, "SELECT*FROM utilisateurs");
  
-
-
 ?>
 
 
@@ -24,15 +23,11 @@ $bdd = mysqli_connect('localhost', 'root', '', 'moduleconnexion');
     <title>admin</title>
 </head>
 <body>
-   <header>
-   <ul>
-        <li><a href="index.php">Acceuil</a></li>
-        <li><a href="inscription.php">Inscription</a></li>
-        <li><a href="connexion.php">Connexion</a></li>
-    </ul>
-   </header>
+   
+<?php require 'fixe.php'; ?>
 
-    <ul>
+    <main class="mainAdmin">
+
         <?php while($r = $request-> fetch_array( MYSQLI_ASSOC)){ ?>
         <table>
             <th>
@@ -46,7 +41,8 @@ $bdd = mysqli_connect('localhost', 'root', '', 'moduleconnexion');
             </td>
         </table>
         <?php   } ?>
-    </ul>
+    
+    </main>
     
 </body>
 </html>
