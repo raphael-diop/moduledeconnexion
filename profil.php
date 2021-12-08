@@ -18,11 +18,13 @@ $message = "";
     if($requete == 1){
         $message = 'Modifications sauvgardés';
     }
+
+    $request = mysqli_query($bdd, "SELECT*FROM utilisateurs WHERE login = '$login'");
+    $result = $request-> fetch_array( MYSQLI_ASSOC);
     
+    $_SESSION = $result;
  }
 ?>
-
-
 
 
 <!DOCTYPE html>
