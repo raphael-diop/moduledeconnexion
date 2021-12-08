@@ -2,7 +2,7 @@
 session_start();
 $_SESSION = '';
 // // SE CONNECTER A LA BASE DE DONNEE
-$bdd = mysqli_connect('localhost', 'root', '', 'moduleconnexion');
+$bdd = mysqli_connect('localhost:3306', 'raphael-diop', 'Legende456@', 'raphael-diop_moduleconnexion');
 // // ENCODER LA BASE DE DONNEE
  mysqli_set_charset($bdd , 'utf-8');
 // // FAIRE LA REQUETE 

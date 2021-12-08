@@ -2,9 +2,9 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3307
--- Généré le : mer. 17 nov. 2021 à 15:29
--- Version du serveur :  10.4.13-MariaDB
+-- Hôte : 127.0.0.1:3306
+-- Généré le : lun. 06 déc. 2021 à 10:51
+-- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -36,14 +36,26 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `password` varchar(255) NOT NULL,
   `instrument` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `utilisateurs`
 --
 
 INSERT INTO `utilisateurs` (`id`, `login`, `prenom`, `nom`, `password`, `instrument`) VALUES
-(1, 'admin', 'admin', 'admin', 'admin', '');
+(1, 'admin', 'admin', 'admin', 'admin', 'admin'),
+(2, 'joker', 'berbar', 'azerry', 'azer', 'marracas'),
+(3, 'carotte', 'victor', 'bertrand', 'aqwzsx', 'flute'),
+(4, 'bibi', 'thomas', 'george', 'zebi', 'pipeau'),
+(5, 'facholand', 'zemmour', 'lepen', 'incroyable', 'grand remplacement'),
+(6, 'olaf', 'hannah', 'pohnert', '1234', 'aucun'),
+(7, 'jean', 'albert', 'camus', 'peste', 'mandoline'),
+(8, 'zabor', 'thomas', 'gret', 'secret', 'violon'),
+(9, 'JeanJeanONE', 'Jean', 'Jean', '12345', 'guinbarde'),
+(10, 'jojo', 'johny', 'laguigne', 'qsdf', 'batterie'),
+(11, '$_GET(password)', 'martin', 'Paris', 'jaimelabite', 'flute Ã  bite'),
+(12, 'raphael-diop', '', '', '', ''),
+(13, 'Tahr le bolide', 'Valentino', 'Ross', 'vroum', '600cm3');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
